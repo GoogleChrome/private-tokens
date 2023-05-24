@@ -1,0 +1,8 @@
+{
+	"https://trusttoken.dev": {
+		"name": "Chromium PST Demo Issuer",
+		"contact": "trust-token-team@chromium.org",
+		"endpoint": "https://trusttoken.dev/tt/k/",
+		"expiry": "1700856258"
+	}
+}
