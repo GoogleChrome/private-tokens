@@ -4,5 +4,11 @@
 		"contact": "trust-token-team@chromium.org",
 		"endpoint": "https://trusttoken.dev/tt/k/",
 		"expiry": "1700856258"
+	},
+	"https://pst-issuer.hcaptcha.com": {
+		"name": "hCaptcha Issuer",
+		"contact": "support@hcaptcha.com",
+		"endpoint": "https://pst-issuer.hcaptcha.com/pst/key-commitment",
+		"expiry": "1702476142"
 	}
 }
