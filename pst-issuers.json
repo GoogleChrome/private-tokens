@@ -11,7 +11,7 @@
 		"endpoint": "https://pst-issuer.hcaptcha.com/pst/key-commitment",
 		"expiry": "1702476142"
 	},
-	"https://pst-issuer.hcaptcha.com": {
+	"https://polyset.xyz": {
 		"name": "Polyset Issuer",
 		"contact": "id@polyset.xyz",
 		"endpoint": "https://polyset.xyz/pst/keys",
