@@ -1,7 +1,7 @@
 # Private State Tokens Issuer Registration
 
 With the [Private State Tokens](https://developer.chrome.com/en/docs/privacy-sandbox/trust-tokens/) API, a limited amount of information can be conveyed from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking. This readme describes the process of how websites can issue Private State Tokens.
-To apply for an issuer (and its key commitments) to be included within Chrome, the issuer website’s operator must open a new [issue](https://github.com/GoogleChrome/private-tokens/issues/new) on [this repository](github.com/googlechrome/private-tokens) using the “New PST Issuer” template which specifies:
+To apply for an issuer (and its key commitments) to be included within Chrome, the issuer website’s operator must open a new [issue](https://github.com/GoogleChrome/private-tokens/issues/new) on [this repository](https://github.com/GoogleChrome/private-tokens) using the “New PST Issuer” template which specifies:
 
 *   Issuer name - Human-readable name representing the issuer website.
 *   The [origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) that is used for the issuing service (scheme, host, port). The scheme must be HTTPS.
