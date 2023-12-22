@@ -16,5 +16,11 @@
 		"contact": "id@polyset.xyz",
 		"endpoint": "https://polyset.xyz/pst/keys",
 		"expiry": "1704570905"
+	},
+	"https://issuer.captchafox.com": {
+		"name": "CaptchaFox Issuer",
+		"contact": "support@captchafox.com",
+		"endpoint": "https://issuer.captchafox.com/pst/key-commitment",
+		"expiry": "1719028800"
 	}
 }
