@@ -22,5 +22,11 @@
 		"contact": "support@captchafox.com",
 		"endpoint": "https://issuer.captchafox.com/pst/key-commitment",
 		"expiry": "1719410400"
+	},
+	"https://pst.authfy.tech": {
+		"name": "AUTHFY Issuer",
+		"contact": "webmaster@authfy.tech",
+		"endpoint": "https://pst.authfy.tech/.well-known/trust-token/key-commitment",
+		"expiry": "1719633600"
 	}
 }
