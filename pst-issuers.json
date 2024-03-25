@@ -28,5 +28,11 @@
 		"contact": "webmaster@authfy.tech",
 		"endpoint": "https://pst.authfy.tech/.well-known/trust-token/key-commitment",
 		"expiry": "1719633600"
+	},
+	"https://www.amazon.com": {
+		"name": "Amazon Ads issuer",
+		"contact": "amazon-ads-pst-issuer@amazon.com",
+		"endpoint": "https://www.amazon.com/tt/k",
+		"expiry": "1727236800"
 	}
 }
