@@ -34,5 +34,11 @@
 		"contact": "amazon-ads-pst-issuer@amazon.com",
 		"endpoint": "https://www.amazon.com/tt/k",
 		"expiry": "1727236800"
+	},
+	"https://pst-issuer.clearsale.com.br": {
+		"name": "Clearsale Anti Fraud",
+		"contact": "suporte.behavior@clear.sale",
+		"endpoint": "https://pst-issuer.clearsale.com.br/.well-known/private-state-token/key-commitment",
+		"expiry": "1733436800"
 	}
 }
