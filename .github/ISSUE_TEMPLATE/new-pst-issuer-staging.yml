@@ -1,4 +1,4 @@
-name: New PST Issuer
+name: New PST Issuer (Staging)
 description: Registration for a new Private State Token Issuer.
 title: "Private State Token Issuer Request - {Issuer Name}"
 labels: ["pst-issuer"]
