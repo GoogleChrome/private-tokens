@@ -68,14 +68,14 @@ body:
        - label: Invalid Traffic Detection for non-advertising use cases - Invalid Traffic (IVT) describes any activity that doesn’t come from a real user with genuine interest. This purpose covers IVT detection for non-advertising use cases.
        - label: Payment & E-Commerc Protections - These use cases cover payment and e-commerce protections – safeguarding users and sites against automated or manual techniques to abuse online payment workflows.
        - label: Bulk Content Abuse (eg Spam) Prevention - Bulk content and spam prevention helps sites differentiate from organic and non-organic content and content interactions, including preventing spam in user generated content submissions.
-       - label: Other - If none of the above selections describe the site’s purpose for issuing Private State Tokens, select this option. Issuers should also describe their use case and consider opening an issue on this repository describing the use case in greater detail, to enable future improvements to this list.
+       - label: Other - If none of the above selections describe the site’s purpose for issuing Private State Tokens, select this option and fill in the following field.
     validations:
       required: true
-  - type: textarea
+  - type: input
     id: purpose-other
     attributes:
       label: Purpose (Other)
-      description: If 'Other' is selected above, please specify your use case.
+      description: If 'Other' is selected above, please specify your use case here and consider opening an issue on this repository describing the use case in greater detail, to enable future improvements to the Purpose list.
       placeholder: N/A
   - type: textarea
     id: disclosure
