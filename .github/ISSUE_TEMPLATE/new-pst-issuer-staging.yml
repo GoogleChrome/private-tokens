@@ -64,8 +64,8 @@ body:
       description: A description of the issuer, describing the intended purpose of the tokens.
       options:
        - label: Account Safety - Covers account-based protections, including safeguarding users from account takeover attempts as well as protecting sites from account creation abuse.
-       - label: Invalid Traffic Detection in Advertising - Covers IVT detection for advertising use cases. Invalid Traffic (IVT) is any activity that doesn’t come from a real user with genuine interest.
-       - label: Invalid Traffic Detection for Non-Advertising - Covers IVT detection for non-advertising use cases.
+       - label: Invalid Traffic Detection in Advertising - Covers IVT (activity that doesn’t come from a real user with genuine interest) detection for advertising use cases.
+       - label: Invalid Traffic Detection for Non-Advertising - Covers IVT (activity that doesn’t come from a real user with genuine interest) detection for non-advertising use cases.
        - label: Payment & E-Commerc Protections - Covers payment and e-commerce protections, safeguarding users and sites against automated or manual techniques to abuse online payment workflows.
        - label: Bulk Content Abuse and Spam Prevention - Covers bulk content and spam prevention helps sites differentiate from organic and non-organic content and content interactions, including preventing spam in user generated content submissions.
        - label: Other - If none of the above selections describe the site’s purpose for issuing Private State Tokens, select this option and fill in the following field.
