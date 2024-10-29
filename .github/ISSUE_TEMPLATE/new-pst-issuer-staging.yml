@@ -24,15 +24,12 @@ body:
       label: Product Name
       description: Human-readable name describing the specific product or service that will issue Private State Tokens.
       placeholder: issuer.example Trust Service
-    validations:
-      required: true
   - type: input
     id: policy
     attributes:
       label: Privacy Policy
       description: Link to the issuer’s Privacy Policy governing the issuance of Private State Tokens.
-    validations:
-      required: true
+      placeholder: https://issuer.example/privacy-policy
   - type: input
     id: origin
     attributes:
