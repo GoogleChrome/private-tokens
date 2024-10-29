@@ -72,7 +72,7 @@ body:
     validations:
       required: true
   - type: textarea
-    id: purpose
+    id: purpose-other
     attributes:
       label: Purpose (Other)
       description: If 'Other' is selected above, please specify your use case.
