@@ -1,0 +1,89 @@
+name: New PST Issuer
+description: Registration for a new Private State Token Issuer.
+title: "Private State Token Issuer Request - {Issuer Name}"
+labels: ["pst-issuer"]
+assignees:
+ - dvorak42
+body:
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Registration as a Private State Token Issuer.
+  - type: input
+    id: name
+    attributes:
+      label: Issuer Name
+      description: Human-readable name representing the issuer website.
+      placeholder: issuer.example Issuer
+    validations:
+      required: true
+  - type: input
+    id: product-name
+    attributes:
+      label: Product Name
+      description: Human-readable name describing the specific product or service that will issue Private State Tokens.
+      placeholder: issuer.example Trust Service
+    validations:
+      required: true
+  - type: input
+    id: policy
+    attributes:
+      label: Privacy Policy
+      description: Link to the issuer’s Privacy Policy governing the issuance of Private State Tokens.
+    validations:
+      required: true
+  - type: input
+    id: origin
+    attributes:
+      label: Origin
+      description: The [origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) that is used for the issuing service (scheme, host, port). The scheme must be HTTPS.
+      placeholder: https://issuer.example
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Email
+      description: An email or email alias that is monitored by the issuer’s operator for issues regarding the issuer website.
+      placeholder: admin@issuer.example
+    validations:
+      required: true
+  - type: input
+    id: key-commitments
+    attributes:
+      label: Key Commitment Endpoint URL
+      description: A public HTTPS endpoint that responds to key commitment requests as described in the [specification](https://wicg.github.io/trust-token-api/#issuer-public-keys).
+      placeholder: https://issuer.example/pst/keys
+    validations:
+      required: true
+  - type: checkboxes
+    id: purpose
+    attributes:
+      label: Purpose
+      description: A description of the issuer, describing the intended purpose of the tokens.
+      options:
+       - label: Account Safety - Account Safety covers a range of account-based protections, including safeguarding users from account takeover attempts as well as protecting sites from account creation abuse.
+       - label: Invalid Traffic Detection in Advertising - Invalid Traffic (IVT) describes any activity that doesn’t come from a real user with genuine interest. This purpose covers IVT detection specifically for advertising use cases.
+       - label: Invalid Traffic Detection for non-advertising use cases - Invalid Traffic (IVT) describes any activity that doesn’t come from a real user with genuine interest. This purpose covers IVT detection for non-advertising use cases.
+       - label: Payment & E-Commerc Protections - These use cases cover payment and e-commerce protections – safeguarding users and sites against automated or manual techniques to abuse online payment workflows.
+       - label: Bulk Content Abuse (eg Spam) Prevention - Bulk content and spam prevention helps sites differentiate from organic and non-organic content and content interactions, including preventing spam in user generated content submissions.
+       - label: Other - If none of the above selections describe the site’s purpose for issuing Private State Tokens, select this option. Issuers should also describe their use case and consider opening an issue on this repository describing the use case in greater detail, to enable future improvements to this list.
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose (Other)
+      description: If 'Other' is selected above, please specify your use case.
+      placeholder: N/A
+  - type: textarea
+    id: disclosure
+    attributes:
+      label: Disclosure and Acknowledgement
+      value: |
+        1. I understand the technical restrictions on key rotation frequency of 60 days in the PST API.
+        2. I understand that my issuer registration will be valid for a period of six months after the key commitment is accepted, and that I will need to re-register in this repository following that six-month period.
+        3. I understand that in the future renewing my registration for this API may have additional requirements, to reduce the risk of abuse by token issuers.
+    validations:
+      required: true
