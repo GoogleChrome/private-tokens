@@ -4,11 +4,29 @@ With the [Private State Tokens](https://developer.chrome.com/en/docs/privacy-san
 To apply for an issuer (and its key commitments) to be included within Chrome, the issuer website’s operator must open a new [issue](https://github.com/GoogleChrome/private-tokens/issues/new) on [this repository](https://github.com/GoogleChrome/private-tokens) using the “New PST Issuer” template which specifies:
 
 *   Issuer name - Human-readable name representing the issuer website.
+*   Product name - Human-readable name describing the specific product or service that will issue Private State Tokens
+*   Privacy Policy - Link to the issuer’s Privacy Policy governing the issuance of Private State Tokens.
 *   The [origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) that is used for the issuing service (scheme, host, port). The scheme must be HTTPS.
 *   An email or email alias that is monitored by the issuer’s operator for issues regarding the issuer website.
 *   A public HTTPS endpoint that responds to key commitment requests as described in the [specification](https://wicg.github.io/trust-token-api/#issuer-public-keys).
+*   Purpose - A selection of common purposes for issuing private state tokens. Organizations should select one or more purposes that match their use case and include in their registration. If selecting “other”, organizations should describe their use case in the submission and also consider opening an issue on this repository describing your use case, to enable future improvements to this list. 
 *   A description of the issuer, describing the intended purpose of the tokens.
 *   Acceptance of the [current Disclosure and Acknowledgement](#disclosure-and-acknowledgement) to be an issuer website.
+
+In order to help sites select the most appropriate purpose as part of issuer registration, the following describes the various purposes in greater detail:
+*  Account safety
+    *  Account Safety covers a range of account-based protections, including safeguarding users from account takeover attempts as well as protecting sites from account creation abuse.
+*  Invalid Traffic Detection in Advertising
+    *  Invalid Traffic (IVT) describes any activity that doesn’t come from a real user with genuine interest. This purpose covers IVT detection specifically for advertising use cases.
+*  Invalid Traffic Detection for non-advertising use cases
+    *  Invalid Traffic (IVT) describes any activity that doesn’t come from a real user with genuine interest. This purpose covers IVT detection for non-advertising use cases.
+*   Payment & e-commerce protections
+    *  These use cases cover payment and e-commerce protections – safeguarding users and sites against automated or manual techniques to abuse online payment workflows.
+*  Bulk content abuse (e.g. Spam) prevention
+    * Bulk content and spam prevention helps sites differentiate from organic and non-organic content and content interactions, including preventing spam in user generated content submissions.
+*  Other, please specify: {description}
+    *  If none of the above selections describe the site’s purpose for issuing Private State Tokens, select this option. Issuers should also describe their use case and consider opening an issue on this repository describing the use case in greater detail, to enable future improvements to this list.
+
 
 Once an endpoint has been verified (to make sure that the endpoint responds with an [appropriate JSON dictionary](https://wicg.github.io/trust-token-api/#issuer-public-keys)), it will be merged into this repository and Chrome server-side infrastructure will begin fetching those keys roughly at an hourly rate and eventually distributing those keys to Chrome instances. Key commitments are only allowed to change every 60 days, and any rotation faster than that will be ignored.
 
