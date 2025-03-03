@@ -33,7 +33,7 @@
 		"name": "Amazon Ads issuer",
 		"contact": "amazon-ads-pst-issuer@amazon.com",
 		"endpoint": "https://www.amazon.com/tt/k",
-		"expiry": "1741752000"
+		"expiry": "1756936800"
 	},
 	"https://pst-issuer.clearsale.com.br": {
 		"name": "Clearsale Anti Fraud",
