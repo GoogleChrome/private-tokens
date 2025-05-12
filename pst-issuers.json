@@ -46,5 +46,11 @@
 		"contact": "privacy-sandbox-devrel@google.com",
 		"endpoint": "https://private-state-token-issuer.glitch.me/.well-known/trust-token/key-commitment",
 		"expiry": "1752768000"
+	},
+	"https://privatetokens.dev": {
+		"name": "Chromium PST Demo Issuer",
+		"contact": "trust-token-team@chromium.org",
+		"endpoint": "https://privatetokens.dev/tt/k/",
+		"expiry": "1762991999"
 	}
 }
