@@ -41,12 +41,6 @@
 		"endpoint": "https://pst-issuer.clearsale.com.br/.well-known/private-state-token/key-commitment",
 		"expiry": "1733436800"
 	},
-	"https://private-state-token-issuer.glitch.me/": {
-		"name": "Privacy Sandbox Demo Issuer",
-		"contact": "privacy-sandbox-devrel@google.com",
-		"endpoint": "https://private-state-token-issuer.glitch.me/.well-known/trust-token/key-commitment",
-		"expiry": "1752768000"
-	},
 	"https://privatetokens.dev": {
 		"name": "Chromium PST Demo Issuer",
 		"contact": "trust-token-team@chromium.org",
