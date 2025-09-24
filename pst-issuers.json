@@ -46,5 +46,11 @@
 		"contact": "trust-token-team@chromium.org",
 		"endpoint": "https://privatetokens.dev/tt/k/",
 		"expiry": "1762991999"
+	},
+	"https://my.contentpass.net": {
+		"name": "Contentpass Issuer",
+		"contact": "ops@contentpass.de",
+		"endpoint": "https://my.contentpass.net/.well-known/trust-token/key-commitment",
+		"expiry": "1773878399"
 	}
 }
