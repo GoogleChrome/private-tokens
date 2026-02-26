@@ -51,6 +51,6 @@
 		"name": "Contentpass Issuer",
 		"contact": "ops@contentpass.de",
 		"endpoint": "https://my.contentpass.net/.well-known/trust-token/key-commitment",
-		"expiry": "1773878399"
+		"expiry": "1787615999"
 	}
 }
