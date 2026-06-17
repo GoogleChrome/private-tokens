@@ -1,4 +1,4 @@
-# Registration
+# Private Verification Tokens Issuer Registration
 
 This readme describes the process of how origins (websites) can register as
 issuers of Private Verification Tokens (PVTs). Registration is
