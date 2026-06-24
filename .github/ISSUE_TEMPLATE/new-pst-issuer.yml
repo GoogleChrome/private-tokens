@@ -3,8 +3,7 @@ description: Registration for a new Private State Token Issuer.
 title: "Private State Token Issuer Request - {Issuer Name}"
 labels: ["pst-issuer"]
 assignees:
- - dvorak42
-body:
+  - aykutbulut
 body:
   - type: markdown
     attributes:
