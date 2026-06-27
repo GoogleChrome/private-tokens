@@ -1,0 +1,85 @@
+name: New PVT Issuer
+description: Registration for a new Private Verification Token Issuer.
+title: "Private Verification Token Issuer Request - {Issuer Name}"
+labels: ["pvt-issuer"]
+assignees:
+  - aykutbulut
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Registration as a Private Verification Token (PVT) Issuer.
+  - type: input
+    id: name
+    attributes:
+      label: Issuer Name
+      description: Human-readable name representing the issuer website.
+      placeholder: issuer.example Issuer
+    validations:
+      required: true
+  - type: input
+    id: origin
+    attributes:
+      label: Origin
+      description: The [origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) that is used for the issuing service (scheme, host, port). The scheme must be HTTPS.
+      placeholder: https://issuer.example
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Email
+      description: An email or email alias that is monitored by the issuer’s operator for issues regarding the issuer website.
+      placeholder: admin@issuer.example
+    validations:
+      required: true
+  - type: input
+    id: key-commitments
+    attributes:
+      label: Key Commitment URL
+      description: A public HTTPS endpoint that responds to key commitment requests.
+      placeholder: https://issuer.example/.well-known/private-verification-token/key-commitment
+    validations:
+      required: true
+  - type: input
+    id: deployment-id
+    attributes:
+      label: Deployment ID
+      description: The deployment ID for the Private Verification Token issuer.
+      placeholder: PrivateTokens_Chrome_PVT-IssuerName-2026
+    validations:
+      required: true
+  - type: input
+    id: batch-size
+    attributes:
+      label: Batch Size
+      description: The batch size of the keys to be committed. Batch size must be between 2 and 20.
+      placeholder: 10
+    validations:
+      required: true
+  - type: input
+    id: expiry
+    attributes:
+      label: Expiry
+      description: Expiration date of the registration in seconds since unix epoch.
+      placeholder: 184368811
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose
+      description: A description of the issuer, describing the intended purpose of the tokens.
+      placeholder: To reduce captcha challenges for trusted users.
+    validations:
+      required: true
+  - type: textarea
+    id: disclosure
+    attributes:
+      label: Disclosure and Acknowledgement
+      value: |
+        1. I understand the technical restrictions on key rotation frequency of 60 days.
+        2. I understand that my issuer registration will be valid for a period of six months after the key commitment is accepted, and that I will need to re-register in this repository following that six-month period.
+        3. I understand that in the future renewing my registration for this API may have additional requirements, to reduce the risk of abuse.
+    validations:
+      required: true
