@@ -3,7 +3,7 @@
         "name": "Chromium PVT Demo Key Commitment Endpoint",
         "contact": "private-verification-tokens-chrome-team@google.com",
 	"endpoint": "https://privatetokens.dev/.well-known/private-verification-token/key-commitment",
-        "deplotmentID": "PrivateTokens_Chrome_PVT-DEMO-2026",
+        "deploymentID": "PrivateTokens_Chrome_PVT-DEMO-2026",
         "batchSize": 10,
 	"expiry": "1796860800"
     }
