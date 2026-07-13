@@ -1,14 +1,14 @@
-name: New PST Issuer
-description: Registration for a new Private State Token Issuer.
-title: "Private State Token Issuer Request - {Issuer Name}"
-labels: ["pst-issuer"]
+name: New PVT Issuer
+description: Registration for a new Private Verification Token Issuer.
+title: "Private Verification Token Issuer Request - {Issuer Name}"
+labels: ["pvt-issuer"]
 assignees:
   - aykutbulut
 body:
   - type: markdown
     attributes:
       value: |
-        Registration as a Private State Token Issuer.
+        Registration as a Private Verification Token (PVT) Issuer.
   - type: input
     id: name
     attributes:
@@ -36,9 +36,33 @@ body:
   - type: input
     id: key-commitments
     attributes:
-      label: Key Commitment Endpoint URL
-      description: A public HTTPS endpoint that responds to key commitment requests as described in the [specification](https://wicg.github.io/trust-token-api/#issuer-public-keys).
-      placeholder: https://issuer.example/pst/keys
+      label: Key Commitment URL
+      description: A public HTTPS endpoint that responds to key commitment requests.
+      placeholder: https://issuer.example/.well-known/private-verification-token/key-commitment
+    validations:
+      required: true
+  - type: input
+    id: deployment-id
+    attributes:
+      label: Deployment ID
+      description: The deployment ID for the Private Verification Token issuer.
+      placeholder: PrivateTokens_Chrome_PVT-IssuerName-2026
+    validations:
+      required: true
+  - type: input
+    id: batch-size
+    attributes:
+      label: Batch Size
+      description: The batch size of the keys to be committed. Batch size must be between 2 and 20.
+      placeholder: 10
+    validations:
+      required: true
+  - type: input
+    id: expiry
+    attributes:
+      label: Expiry
+      description: Expiration date of the registration in seconds since unix epoch.
+      placeholder: 184368811
     validations:
       required: true
   - type: textarea
@@ -46,7 +70,7 @@ body:
     attributes:
       label: Purpose
       description: A description of the issuer, describing the intended purpose of the tokens.
-      placeholder: To detect fraud using trust signals.
+      placeholder: To reduce captcha challenges for trusted users.
     validations:
       required: true
   - type: textarea
@@ -54,8 +78,8 @@ body:
     attributes:
       label: Disclosure and Acknowledgement
       value: |
-        1. I understand the technical restrictions on key rotation frequency of 60 days in the PST API.
+        1. I understand the technical restrictions on key rotation frequency of 60 days.
         2. I understand that my issuer registration will be valid for a period of six months after the key commitment is accepted, and that I will need to re-register in this repository following that six-month period.
-        3. I understand that in the future renewing my registration for this API may have additional requirements, to reduce the risk of abuse by token issuers.
+        3. I understand that in the future renewing my registration for this API may have additional requirements, to reduce the risk of abuse.
     validations:
       required: true
