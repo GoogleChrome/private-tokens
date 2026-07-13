@@ -19,8 +19,8 @@ issuer website’s operator must open a new issue on this repository using the
 * Acknowledgement: Confirmation that the origin understands and will adhere to PVT policies,
   including not using PVTs for user tracking  or cross-site correlation.
 
-Key commintment endpoint requirements are documented at
-[Key Commtiment Endpoint Requirements](https://github.com/GoogleChrome/private-tokens/blob/mainbug/README.md#key-commitment-endpoint-requirements) section.
+Key commitment endpoint requirements are documented at
+[Key Commitment Endpoint Requirements](https://github.com/GoogleChrome/private-tokens/blob/mainbug/README.md#key-commitment-endpoint-requirements) section.
 
 Once the response from key commitment endpoint has been verified (to make sure
 that the endpoint responds with an appropriate JSON dictionary), it will be
