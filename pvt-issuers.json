@@ -5,6 +5,6 @@
 	"endpoint": "https://privatetokens.dev/.well-known/private-verification-token/key-commitment",
         "deploymentID": "PrivateTokens_Chrome_PVT-DEMO-2026",
         "batchSize": 10,
-	"expiry": "1796860800"
+	"expiry": "1801699199"  
     }
 }
