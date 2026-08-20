@@ -31,37 +31,34 @@ Content-Length: <Length of response>
 where response is a [JSON object](https://datatracker.ietf.org/doc/html/rfc7159#section-4)
 with the following name/value pairs.
 
-* Name `domain`, value [string](https://datatracker.ietf.org/doc/html/rfc7159#section-7).
-  The string must be a registrable domain of the `issuer_origin`.
-* Name `issuer_origin`, value string. The value must be a valid URL. The URL must have https
-  scheme. The URL must have same registrable domain (eTLD+1) as the one specified in `domain`.
+* Name `issuerRequestUri`, value string. The value must be a valid URL. The URL must have https
+  scheme.
 * Name `version`, value must be an integer. Indicates the PVT version. The value must fit
   int32. The browser will ignore if the version is not supported.
-* Name `public_key`, value base64 encoding of the public key. Public key is parsed based on
+* Name `publicKey`, value base64 encoding of the public key. Public key is parsed based on
   the crypto parameters deduced from the value of the `version`.
-* Name `key_id`, value integer. Key id must fit into uint8. Key id will be used in token
-  requests as specified in the privacy pass specs.
+* Name `publicKeyProof`, value base64 encoding of the public key proof. Public key proof is
+  parsed based on the crypto parameters deduced from the value of the `version`.
 * Name `expiration`, value *string*. Expiration must fit into int64. Expiration is
   in number of seconds since the unix epoch. The browser will stop using the `public_key` past
   expiration date.
-* Name `batch_size`, value integer. Browser will send token requests in batches. Each 
-  HTTP request to issuance endpoint will contain `batch_size` many individual
-  [TokenRequest](https://github.com/cathieyun/draft-athm/blob/main/draft-yun-privacypass-athm.md#client-to-issuer-request).
-* Name `redeemer_origins`, value [array](https://datatracker.ietf.org/doc/html/rfc7159#section-5)
+* Name `batchSize`, value integer. Browser will send token requests in batches. Each 
+  HTTP request to issuance endpoint will contain `batchSize` many individual
+  [TokenRequest](https://github.com/cathieyun/draft-athm/blob/main/draft-yun-privacypass-athm.md#client-to-issuer-request)s.
+* Name `redeemerOrigins`, value [array](https://datatracker.ietf.org/doc/html/rfc7159#section-5)
   of strings. Strings must be valid web origins. The scheme must be https.
 
 For an example see the demo key commitment endpoint
-[https://privatetokens.dev/.well-known/private-verification-token/key-commitment](https://privatetokens.dev/.well-known/private-verification-token/key-commitment), which returns (on June 8th 2026)
+[https://privatetokens.dev/.well-known/private-verification-token/key-commitment](https://privatetokens.dev/.well-known/private-verification-token/key-commitment), which returns (on August 20th 2026)
 
 ```
 {
-"domain": "privatetokens.dev",
-"issuer_origin": "https://pvtissuer.privatetokens.dev",
+"issuerRequestUri": "https://privatetokens.dev/.well-known/private-verification-token/issue",
 "version": 1,
-"public_key": "AyuAAk7oGNcJGWeAqEr/4IeJ9XFSn8zBrM4H7qLfL8ZfA19qbrhL6pwTYRFUar2GQ8R8O0PlPp56h5a6G5JNCU4Dt/Ft8K2Cy9i9agTtQnEHrdWj1LqEDps0Gju6wdm3/hk=",
-"key_id": 3,
-"expiration": "184368811",
-"batch_size": 10,
-"redeemer_origins": ["https://privatetokens.dev"]
+"publicKey": "AgHPcLgHpe/ASNDfgaOp7gyvULDweWsAw5L1i2wMvi6FAoIgHpg69O7qX35d3rBH+TgWTT/WWnNInST0chCpLqBFA6Ib8wfRFpEUX2VaoJhn+u8n5AEPpLfixlwsl841kK1l",
+"publicKeyProof": "trewu/RhAwtPh5gfxo3wC7dbDoWcScC69qrBf28caNrdAL8x5jcYW8ol6A26OiGVsqQB2XoAPeQHtvYxN+kgqw==",
+"expiration": "1794854079",
+"batchSize": 10,
+"redeemerOrigins": ["https://privatetokens.dev"]
 }
 ```
