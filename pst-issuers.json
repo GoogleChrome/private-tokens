@@ -1,51 +1,9 @@
 {
-	"https://trusttoken.dev": {
-		"name": "Chromium PST Demo Issuer",
-		"contact": "trust-token-team@chromium.org",
-		"endpoint": "https://trusttoken.dev/tt/k/",
-		"expiry": "1700856258"
-	},
-	"https://pst-issuer.hcaptcha.com": {
-		"name": "hCaptcha Issuer",
-		"contact": "support@hcaptcha.com",
-		"endpoint": "https://pst-issuer.hcaptcha.com/pst/key-commitment",
-		"expiry": "1702476142"
-	},
-	"https://polyset.xyz": {
-		"name": "Polyset Issuer",
-		"contact": "id@polyset.xyz",
-		"endpoint": "https://polyset.xyz/pst/keys",
-		"expiry": "1704570905"
-	},
-	"https://issuer.captchafox.com": {
-		"name": "CaptchaFox Issuer",
-		"contact": "support@captchafox.com",
-		"endpoint": "https://issuer.captchafox.com/pst/key-commitment",
-		"expiry": "1719410400"
-	},
-	"https://pst.authfy.tech": {
-		"name": "AUTHFY Issuer",
-		"contact": "webmaster@authfy.tech",
-		"endpoint": "https://pst.authfy.tech/.well-known/trust-token/key-commitment",
-		"expiry": "1719633600"
-	},
 	"https://www.amazon.com": {
 		"name": "Amazon Ads issuer",
 		"contact": "amazon-ads-pst-issuer@amazon.com",
 		"endpoint": "https://www.amazon.com/tt/k",
 		"expiry": "1811808000"
-	},
-	"https://pst-issuer.clearsale.com.br": {
-		"name": "Clearsale Anti Fraud",
-		"contact": "suporte.behavior@clear.sale",
-		"endpoint": "https://pst-issuer.clearsale.com.br/.well-known/private-state-token/key-commitment",
-		"expiry": "1733436800"
-	},
-	"https://privatetokens.dev": {
-		"name": "Chromium PST Demo Issuer",
-		"contact": "trust-token-team@chromium.org",
-		"endpoint": "https://privatetokens.dev/tt/k/",
-		"expiry": "1762991999"
 	},
 	"https://my.contentpass.net": {
 		"name": "Contentpass Issuer",
