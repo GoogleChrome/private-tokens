@@ -5,6 +5,12 @@
 		"endpoint": "https://www.amazon.com/tt/k",
 		"expiry": "1811808000"
 	},
+	"https://privatetokens.dev": {
+		"name": "Chromium PST Demo Issuer",
+		"contact": "trust-token-team@chromium.org",
+		"endpoint": "https://privatetokens.dev/tt/k/",
+		"expiry": "1807549257"
+	},
 	"https://my.contentpass.net": {
 		"name": "Contentpass Issuer",
 		"contact": "ops@contentpass.de",
